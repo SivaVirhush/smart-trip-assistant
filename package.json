@@ -1,0 +1,11 @@
+{
+  "name": "incredible-heritage",
+  "private": true,
+  "scripts": {
+    "build": "npm --prefix frontend run build",
+    "test": "npm --prefix frontend test",
+    "start:frontend": "npm --prefix frontend start",
+    "start:backend": "npm --prefix backend start",
+    "dev:backend": "npm --prefix backend run dev"
+  }
+}

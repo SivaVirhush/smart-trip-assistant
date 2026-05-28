@@ -1,0 +1,179 @@
+.calendar-page {
+  height: calc(100vh - 60px); /* Adjust based on your header height */
+  padding: 20px;
+  background:
+    radial-gradient(circle at 12% 8%, rgba(151, 99, 58, 0.14), transparent 25rem),
+    linear-gradient(135deg, #fffdf9, #f0dfca);
+  color: var(--ink);
+  animation: breezeIn 520ms ease both;
+}
+
+.calendar-view-col {
+  height: 100%;
+}
+
+.calendar-view-container {
+  background: rgba(255, 255, 255, 0.86);
+  border-radius: 8px;
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow);
+  height: 100%;
+  overflow: visible;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.chat-col {
+  height: 100%;
+}
+
+.chat-container {
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+}
+
+.messages-container {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  max-height: 500px;
+}
+
+.assistant-message {
+  align-self: flex-start;
+}
+
+.user-message {
+  align-self: flex-end;
+  text-align: right;
+}
+
+/* Customize react-big-calendar */
+.rbc-calendar {
+  font-family: "Roboto", sans-serif;
+  flex: 1;
+  min-height: 400px;
+  margin-bottom: 70px;
+  color: var(--ink);
+}
+
+.guest-calendar-toolbar {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.calendar-nav-group,
+.calendar-tools-group,
+.calendar-view-switch {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.calendar-tools-group {
+  justify-content: flex-end;
+}
+
+.guest-calendar-toolbar button {
+  border: 1px solid rgba(123, 78, 47, 0.26);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.72);
+  color: var(--brown-dark);
+  padding: 8px 12px;
+  font-weight: 650;
+  transition:
+    background-color 180ms ease,
+    color 180ms ease,
+    transform 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.guest-calendar-toolbar button:hover,
+.guest-calendar-toolbar button:focus,
+.guest-calendar-toolbar button.is-active {
+  background: rgba(123, 78, 47, 0.14);
+  color: var(--brown-dark);
+  box-shadow: 0 8px 18px rgba(74, 44, 27, 0.12);
+  transform: translateY(-1px);
+}
+
+.guest-calendar-toolbar button.is-active {
+  background: linear-gradient(135deg, #93613d, #5b3721);
+  color: #fff8ee;
+}
+
+.calendar-current-date {
+  min-width: 170px;
+  color: var(--ink);
+  font-size: 1.12rem;
+  font-weight: 750;
+  text-align: center;
+}
+
+.calendar-jump-control {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--muted);
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.calendar-jump-control input {
+  border: 1px solid rgba(123, 78, 47, 0.26);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.76);
+  color: var(--brown-dark);
+  padding: 7px 9px;
+}
+
+.rbc-event {
+  background: linear-gradient(135deg, #8a5734, #5b3721);
+  border-radius: 4px;
+  border: none;
+  box-shadow: 0 8px 18px rgba(74, 44, 27, 0.16);
+}
+
+.rbc-today {
+  background-color: rgba(151, 99, 58, 0.12);
+}
+
+.calendar-page .card {
+  background: rgba(255, 255, 255, 0.82);
+  backdrop-filter: blur(12px);
+}
+
+@media (max-width: 768px) {
+  .calendar-page {
+    padding: 10px;
+    height: auto;
+  }
+
+  .calendar-view-col,
+  .chat-col {
+    height: auto;
+    margin-bottom: 20px;
+  }
+
+  .rbc-calendar {
+    margin-bottom: 0;
+  }
+
+  .guest-calendar-toolbar {
+    grid-template-columns: 1fr;
+  }
+
+  .calendar-current-date {
+    order: -1;
+    text-align: left;
+  }
+
+  .calendar-tools-group {
+    justify-content: flex-start;
+  }
+}

@@ -1,0 +1,18 @@
+Incredible Heritage
+
+Frontend:
+React app in the frontend folder.
+
+Backend:
+Express API in the backend folder.
+
+Guest API:
+- POST /api/guest/chat
+- POST /api/guest/calendar-chat
+
+Data:
+Chat and calendar data stay in the browser session.
+
+Deploy:
+Frontend can be deployed from the frontend folder on Vercel.
+Backend can be deployed separately and connected with REACT_APP_API_URL.
